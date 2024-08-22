@@ -1,0 +1,30 @@
+#####
+name: CycleGan
+bidirect: False #Unidirectional or bidirectional
+regist: True    # With or without registration network
+noise_level: 1  #  noise level
+port: 8881   #  port parameters
+save_root: '/media/Data/MRI/divya_exp/reggan/' #./output/Cyc/NC+R/'
+image_save:  '/media/Data/MRI/divya_exp/reggan/'  #'./output/Cyc/NC+R/img/'
+
+# lamda weight
+Adv_lamda: 1
+Cyc_lamda: 10
+Corr_lamda: 20
+Smooth_lamda: 10
+
+
+epoch: 0        # starting epoch
+n_epochs: 200       # How often do you want to display output images during training
+batchSize: 8               # size of the batches
+dataroot: '/media/Data/MRI/datasets/ProstateX_dce_h5/'                # '/data1/T1T2/train2D/'     # root directory of the dataset
+val_dataroot: '/media/Data/MRI/datasets/ProstateX_dce_h5/'         # '/data1/T1T2/val2D/'
+lr: 0.0001                   # initial learning rate
+decay_epoch: 20            # epoch to start linearly decaying the learning rate to 0
+size: 160               # size of the data crop
+input_nc: 4         
+output_nc: 1                  
+cuda: True                
+n_cpu: 1
+gpu_ids: 0
+
